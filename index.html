@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>rock_paper_scissors</title>
+    </head>
+    <body>
+        <script>
+            function computerPlay() {
+                let messages = ["Rock", "Scissors", "Paper"]
+                let result = messages[Math.floor(Math.random() * messages.length)];
+			return result;
+            }
+            function playRound(playerSelection , computerPlay) {
+
+            let roundresult   
+
+            if (playerSelection===computerSelection) { return "It's a draw"
+                let roundresult = "It's a draw"              
+            } else {if (playerSelection==="Rock" && computerSelection==="Paper") { 
+                return "You lose"
+                let roundresult = "You lose"              
+            } else {if (playerSelection==="Rock" && computerSelection==="Scissors") {
+                return "You win"
+                let roundresult = "You win"
+            } else {if (playerSelection==="Scissors" && computerSelection==="Rock") {
+                return "You lose"
+                let roundresult = "You lose"
+            } else {if (playerSelection==="Scissors" && computerSelection==="Paper") {
+                return "You win"
+                let roundresult = "You win"
+            } else {if (playerSelection==="Paper" && computerSelection==="Scissors") {
+                return "You lose"
+                let roundresult = "You lose"
+            } else {return "You win"
+            let roundresult = "You win"
+             }}}}}}
+            }
+
+            const playerSelection = "Paper"
+            const computerSelection = computerPlay()
+            console.log(playRound(playerSelection , computerPlay))
+        </script>
+    </body>
+</html>
