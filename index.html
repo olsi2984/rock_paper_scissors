@@ -6,39 +6,72 @@
     <body>
         <script>
             function computerPlay() {
-                let messages = ["Rock", "Scissors", "Paper"]
+                let messages = ["Rock", "Scissors", "Paper"];
                 let result = messages[Math.floor(Math.random() * messages.length)];
 			return result;
             }
-            function playRound(playerSelection , computerPlay) {
-
-            let roundresult   
-
-            if (playerSelection===computerSelection) { return "It's a draw"
-                let roundresult = "It's a draw"              
+            let roundresult;
+            function playRound(playerSelection , computerSelection) {
+            
+            if (playerSelection===computerSelection) { 
+                roundresult = "It's a draw";              
             } else {if (playerSelection==="Rock" && computerSelection==="Paper") { 
-                return "You lose"
-                let roundresult = "You lose"              
+                roundresult = "You lose";
+                            
             } else {if (playerSelection==="Rock" && computerSelection==="Scissors") {
-                return "You win"
-                let roundresult = "You win"
+                roundresult = "You win";
+                
             } else {if (playerSelection==="Scissors" && computerSelection==="Rock") {
-                return "You lose"
-                let roundresult = "You lose"
+                roundresult = "You lose";
+               
             } else {if (playerSelection==="Scissors" && computerSelection==="Paper") {
-                return "You win"
-                let roundresult = "You win"
+                roundresult = "You win";
+                
             } else {if (playerSelection==="Paper" && computerSelection==="Scissors") {
-                return "You lose"
-                let roundresult = "You lose"
-            } else {return "You win"
-            let roundresult = "You win"
+                roundresult = "You lose";
+                
+            } else {if (playerSelection==="Paper" && computerSelection==="Rock") {
+                roundresult = "You win";
+            } else {
+                console.log("Not a valid selection")
+            }
+                
              }}}}}}
             }
 
-            const playerSelection = "Paper"
-            const computerSelection = computerPlay()
-            console.log(playRound(playerSelection , computerPlay))
+            function game() {
+                let round = 1 ;
+                let playerscore = 0 ;
+                let computerscore = 0 ;
+                for (let round = 1; round <=5; round++) {
+                    let playerSelection = prompt("Please make your play: ");
+                    
+                    const computerSelection = computerPlay();                                         
+                    playRound(playerSelection , computerSelection);
+                    if (roundresult === "You win") {
+                        playerscore++ ;  
+                        console.log("YOU WIN; " + playerSelection + " BEATS " + computerSelection) ;                      
+                    }
+                    if (roundresult === "You lose") {
+                        computerscore++ ;    
+                        console.log("COMPUTER WINS; " + computerSelection + " BEATS " + playerSelection)  ;                  
+                    }
+                    if (roundresult === "It's a draw") {
+                        console.log( "This round is a draw, you both chose " + playerSelection);
+                    }
+                    
+                }
+
+                if (playerscore>computerscore) {
+                    return "Congratulations, you won" + ", Your score: " + playerscore + ", Computer score: " + computerscore;
+                } else {
+                    return "Sorry, computer Wins" + ", Yourr score: " + playerscore + ", Computer score: " + computerscore;
+                }                
+
+
+            }
+           
+            console.log(game());
         </script>
     </body>
 </html>
