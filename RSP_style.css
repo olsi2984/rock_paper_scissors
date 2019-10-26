@@ -1,0 +1,35 @@
+button {
+    background-color: #008CBA; /* Blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 250px
+  }
+
+h1 {
+    text-align: center;
+    color: blue;
+    background-color: aquamarine;
+    }
+p {
+    text-align: center;
+    padding: 32px 32px;
+}
+
+div {
+    text-align: center;
+    border: 5px solid blueviolet;
+    background-color: yellowgreen;
+    }
+
+h3 {
+    text-align: center;
+    background-color: aquamarine;
+    padding: 32px 32px;
+    color: blue;
+    }
+
